@@ -1,0 +1,63 @@
+.AdviceWindow {
+  background-color: #313a49;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  border-radius: 20px;
+  padding: 20px 20px 0 20px;
+}
+
+@media screen and (max-width: 340px) {
+  h3 {
+    font-size: 9px;
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+}
+
+.Decor-Line {
+  background: url('../assets/pattern-divider-desktop.svg') 50% 50% no-repeat;
+  width: 50px;
+  height: 50px;
+}
+
+h3 {
+  color: #54ffab;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #cee2e9;
+  margin-bottom: 15px;
+}
+
+.Button-Advice {
+  position: relative;
+  top: 25px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  border: none;
+  background: url('../assets/icon-dice.svg') 50% 50% no-repeat #54ffab;
+  cursor: pointer;
+  box-shadow: 0px 0px 25px 10px #54ffab;
+  transition: box-shadow 0.2s;
+}
+
+.Button-Advice:hover {
+  box-shadow: 0px 0px 35px 10px #54ffab;
+}
+
+.Button-Advice:active {
+  box-shadow: 0px 0px 20px 10px #54ffab;
+}
