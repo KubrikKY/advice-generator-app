@@ -1,22 +1,13 @@
-import { FC, useCallback, useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '../store/hook/hookRedux';
+import { FC, useEffect } from 'react';
 import './AdviceStyle.css';
-import { getAdvice } from '../store/advice/adviceSlice';
+import { useAdvice } from '../hook/useAdvice';
 
 const AdviceWindow: FC = () => {
-  const [advice, id] = useAppSelector((state) => [
-    state.advice.advice,
-    state.advice.id,
-  ]);
-  const dispatch = useAppDispatch();
-
-  const getAdviceHandler = useCallback(() => {
-    dispatch(getAdvice());
-  }, [dispatch]);
+  const { advice, id, getAdviceHandler } = useAdvice();
 
   useEffect(() => {
     getAdviceHandler();
-  }, [dispatch, getAdviceHandler]);
+  }, [getAdviceHandler]);
 
   return (
     <div className="AdviceWindow">
